@@ -14,66 +14,18 @@ namespace testBddIHM
     {
         public void Create()
         {
-            DataAccess access = new DataAccess();
-            try
-            {
-                if (access.openConnection())
-                {
-                    access.setData($"INSERT INTO AFFECTE_A(NUMEROD) VALUES('{this.NumeroDivision}')");
-                }
-            }
-            catch (Exception ex)
-            {
-                System.Windows.MessageBox.Show("NumeroDivision : " + ex.Message, " Important Message Division");
-            }
         }
 
         public void Read()
         {
-            DataAccess access = new DataAccess();
-            try
-            {
-                if (access.openConnection())
-                {
-                    access.setData($"SELECT * FROM AFFECTE_A(NUMEROD) VALUES('{this.NumeroDivision}')");
-                }
-            }
-            catch (Exception ex)
-            {
-                System.Windows.MessageBox.Show("NumeroDivision : " + ex.Message, " Important Message");
-            }
         }
 
         public void Update()
         {
-            DataAccess access = new DataAccess();
-            try
-            {
-                if (access.openConnection())
-                {
-                    access.getData($"UPDATE AFFECTE_A(NUMEROD) SET NUMEROD = '{this.NumeroDivision}')");
-                }
-            }
-            catch (Exception ex)
-            {
-                System.Windows.MessageBox.Show("NumeroDivision : " + ex.Message, " Important Message");
-            }
         }
 
         public void Delete()
         {
-            DataAccess access = new DataAccess();
-            try
-            {
-                if (access.openConnection())
-                {
-                    access.setData($"DELETE FROM AFFECTE_A(NUMEROD) where NUMEROD = '{this.NumeroDivision}')");
-                }
-            }
-            catch (Exception ex)
-            {
-                System.Windows.MessageBox.Show("NumeroDivision : " + ex.Message, " Important Message");
-            }
         }
 
         public List<Division> FindAll()

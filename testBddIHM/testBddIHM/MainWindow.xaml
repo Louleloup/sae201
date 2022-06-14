@@ -23,10 +23,10 @@
         <ListView x:Name="listviewAffectationDivision" Foreground="Black" Grid.Column="1" Margin="29,519,202,15">
             <ListView.View>
                 <GridView>
-                    <GridViewColumn Header="num Division" Width="100" DisplayMemberBinding="{Binding NumeroDivision}" />
-                    <GridViewColumn Header="num Mission" Width="100" DisplayMemberBinding="{Binding NumeroMission}" />
-                    <GridViewColumn Header="Date" Width="80" DisplayMemberBinding="{Binding Date, StringFormat=dd/MM/yyyy}" />
-                    <GridViewColumn Header="Commentaire" Width="95" DisplayMemberBinding="{Binding Commentaire}" />
+                    <GridViewColumn Header="Num Division" Width="80" DisplayMemberBinding="{Binding NumeroD}" />
+                    <GridViewColumn Header="Num Mission" Width="80" DisplayMemberBinding="{Binding NumeroM}" />
+                    <GridViewColumn Header="Date" Width="80" DisplayMemberBinding="{Binding Date, StringFormat='dd MMM yyyy'}" />
+                    <GridViewColumn Header="Commentaire" Width="100" DisplayMemberBinding="{Binding Commentaire}" />
 
                 </GridView>
             </ListView.View>

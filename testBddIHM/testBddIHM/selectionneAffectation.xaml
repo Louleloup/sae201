@@ -33,11 +33,11 @@
                     <GridViewColumn CellTemplate="{StaticResource caseACocher}" Width="30"/>
                     <GridViewColumn
                         Width="120"
-                        DisplayMemberBinding="{Binding NumeroDivision}"
+                        DisplayMemberBinding="{Binding NumeroD}"
                         Header="num Division" />
                     <GridViewColumn
                         Width="120"
-                        DisplayMemberBinding="{Binding NumeroMission}"
+                        DisplayMemberBinding="{Binding NumeroM}"
                         Header="num Mission" />
                     <GridViewColumn
                         Width="100"
