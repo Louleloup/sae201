@@ -51,7 +51,7 @@ namespace testBddIHM
             {
                 if (access.openConnection())
                 {
-                    access.setData($"UPDATE AFFECTE_A(NUMEROD) SET NUMEROD = '{this.NumeroDivision}')");
+                    access.getData($"UPDATE AFFECTE_A(NUMEROD) SET NUMEROD = '{this.NumeroDivision}')");
                 }
             }
             catch (Exception ex)

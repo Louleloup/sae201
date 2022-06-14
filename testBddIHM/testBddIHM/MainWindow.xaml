@@ -20,7 +20,7 @@
                 </GridView>
             </ListView.View>
         </ListView>
-        <ListView x:Name="listviewAffectationDivision" Foreground="Black" Margin="10,522,10,55">
+        <ListView x:Name="listviewAffectationDivision" Foreground="Black" Grid.Column="1" Margin="29,519,202,15">
             <ListView.View>
                 <GridView>
                     <GridViewColumn Header="Num Division" Width="80" DisplayMemberBinding="{Binding NumeroD}" />
@@ -39,16 +39,16 @@
                 </GridView>
             </ListView.View>
         </ListView>
-        <ListView x:Name="listviewMission" Margin="29,0,21,55" Foreground="Black" Grid.Column="1" Height="207" VerticalAlignment="Bottom">
+        <ListView x:Name="listviewMission" Margin="14,519,14,15" Foreground="Black">
             <ListView.View>
                 <GridView>
-                    <GridViewColumn Header="Numéro Mission" Width="180" DisplayMemberBinding="{Binding NumeroMission}" />
-                    <GridViewColumn Header="Libelle mission" Width="180" DisplayMemberBinding="{Binding LibelleMission}" />
-                    <GridViewColumn Header="Commentaire" Width="180" DisplayMemberBinding="{Binding Commentaire}" />
+                    <GridViewColumn Header="Numéro Mission" Width="100" DisplayMemberBinding="{Binding NumeroMission}" />
+                    <GridViewColumn Header="Libelle mission" Width="100" DisplayMemberBinding="{Binding LibelleMission}" />
+                    <GridViewColumn Header="Commentaire" Width="130" DisplayMemberBinding="{Binding Commentaire}" />
                 </GridView>
             </ListView.View>
         </ListView>
-        <Border BorderThickness="5" BorderBrush="Black" Grid.Column="1" Margin="29,27,29,311">
+        <Border BorderThickness="5" BorderBrush="Black" Grid.Column="1" Margin="29,27,29,0" Height="446" VerticalAlignment="Top">
             <Border.Background>
                 <ImageBrush ImageSource="/2image.jpg"/>
             </Border.Background>
@@ -59,16 +59,16 @@
         <TextBlock Grid.Column="1" HorizontalAlignment="Left" Margin="68,90,0,0" Text="Préciser Division :" VerticalAlignment="Top" Foreground="White" FontSize="25"/>
         <TextBlock Grid.Column="1" HorizontalAlignment="Left" Margin="68,250,0,0" Text="Renseigner Commentaire :" VerticalAlignment="Top" Foreground="White" FontSize="25"/>
         <ComboBox x:Name="comboBoxMission"  DisplayMemberPath="NumeroMission" Grid.Column="1" Width="130" Height="32" Margin="288,201,212,0" VerticalAlignment="Top" FontSize="20"/>
-        <DatePicker x:Name="datePickerAffectation" Grid.Column="1"  Width="250" Height="32" Margin="289,145,96,0" VerticalAlignment="Top" FontSize="20"/>
+        <DatePicker x:Name="datePickerAffectation" Grid.Column="1" Width="240" Height="32" Margin="298,146,100,0" VerticalAlignment="Top" FontSize="20"/>
         <ComboBox x:Name="comboBoxDivision" DisplayMemberPath="NumeroDivision" Grid.Column="1" Width="130" Height="32" Margin="288,91,212,0" VerticalAlignment="Top" FontSize="20"/>
-        <TextBox x:Name="txtBoxCommentaire" BorderThickness="2" Margin="52,301,46,358" Text="" Grid.Column="1" FontSize="20" BorderBrush="Black"/>
-        <Button Click="Bouton_Valider" Content="Valider" Grid.Column="1" Margin="0,0,46,321"  Width="100" Height="32" FontSize="20" HorizontalAlignment="Right" VerticalAlignment="Bottom"/>
-        <Label x:Name="labeltest" Content="" Grid.Column="1" HorizontalAlignment="Left" Margin="52,610,0,0" VerticalAlignment="Top" Height="104" Width="540" FontSize="10"/>
+        <TextBox x:Name="txtBoxCommentaire" BorderThickness="2" Margin="52,301,46,0" Text="" Grid.Column="1" FontSize="20" BorderBrush="Black" Height="125" VerticalAlignment="Top"/>
+        <Button Click="Bouton_Valider" Content="Valider" Grid.Column="1" Margin="0,431,46,0"  Width="100" FontSize="20" HorizontalAlignment="Right" Height="32" VerticalAlignment="Top"/>
         <TextBlock HorizontalAlignment="Left" VerticalAlignment="Top" Margin="32,181,0,0" Text="Corp d'Armée" FontSize="20" FontWeight="Bold"/>
         <TextBlock HorizontalAlignment="Left" VerticalAlignment="Top" Margin="216,181,0,0" Text="Division Militaire" FontSize="20" FontWeight="Bold"/>
-        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,490,0,0" Text="Affectation aux Missions Humanitaires" FontSize="20" FontWeight="Bold"/>
-        <TextBlock Margin="0,0,0,275" Text="Missions Humanitaires" FontSize="20" FontWeight="Bold" Grid.Column="1" HorizontalAlignment="Center" Width="214" Height="27" VerticalAlignment="Bottom"/>
-        <Button Click="Bouton_Supprimer_Affectation"  Content="Supprimer Affectation" HorizontalAlignment="Left" Margin="216,134,0,0" VerticalAlignment="Top" Height="42" Width="165" FontSize="15"/>
+        <TextBlock Margin="68,486,218,270" Text="Affectation aux Missions Humanitaires" FontSize="20" FontWeight="Bold" Grid.Column="1"/>
+        <TextBlock Margin="0,486,0,0" Text="Missions Humanitaires" FontSize="20" FontWeight="Bold" HorizontalAlignment="Center" Width="214" Height="27" VerticalAlignment="Top"/>
+        <Button Click="Bouton_Supprimer_Affectation"  Content="Supprimer Affectation" Margin="0,0,14,190" FontSize="15" Grid.Column="1" Height="42" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="164"/>
+        <Button Click="Bouton_Modifier_Affectation"  Content="Modifier Affectation" Margin="0,0,14,98" FontSize="15" Grid.Column="1" Height="42" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="164"/>
 
     </Grid>
 </Window>

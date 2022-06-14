@@ -27,5 +27,6 @@
                 </GridView>
             </ListView.View>
         </ListView>
+        <Button Content="Annuler" HorizontalAlignment="Right" Margin="0,0,155,10" VerticalAlignment="Bottom" Height="44" Width="128" FontSize="20" Click="Bouton_Annuler"/>
     </Grid>
 </Window>

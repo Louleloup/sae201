@@ -97,6 +97,18 @@ namespace testBddIHM
 
         public void Update()
         {
+            /*DataAccess access = new DataAccess();
+            try
+            {
+                if (access.openConnection())
+                {
+                    access.getData($"UPDATE AFFECTE_A WHERE NUMEROD = {this.NumeroD} AND NUMEROM = {this.NumeroM} AND DATE = '{this.Date.ToShortDateString()}' AND COMMENTAIRE = '{this.Commentaire}')");
+                }
+            }
+            catch (Exception ex)
+            {
+                System.Windows.MessageBox.Show("NumeroDivision : " + ex.Message, " Important Message");
+            }*/
         }
 
         public void Delete()
@@ -106,7 +118,7 @@ namespace testBddIHM
             {
                 if (access.openConnection())
                 {
-                    access.setData($"DELETE FROM AFFECTE_A(NUMEROD, NUMEROM, DATE, COMMENTAIRE)  WHERE NUMEROD = {this.NumeroD}, NUMEROM = {this.NumeroM}, DATE = {this.Date}, COMMENTAIRE = {this.Commentaire}");
+                    access.setData($"DELETE FROM AFFECTE_A WHERE NUMEROD = {this.NumeroD} AND NUMEROM = {this.NumeroM} AND DATE = '{this.Date.ToShortDateString()}' AND COMMENTAIRE = '{this.Commentaire}'");
                 }
             }
             catch (Exception ex)
