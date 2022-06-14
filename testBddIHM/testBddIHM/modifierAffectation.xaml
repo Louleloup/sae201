@@ -13,7 +13,7 @@
         <TextBlock Margin="23,89,0,0" Text="Préciser Division :" VerticalAlignment="Top" FontSize="15" HorizontalAlignment="Left" Width="115"/>
         <TextBlock HorizontalAlignment="Left" Margin="29,278,0,0" Text="Renseigner Commentaire :" VerticalAlignment="Top" FontSize="15"/>
         <ComboBox x:Name="comboBoxMission"  DisplayMemberPath="NumeroMission" Width="130" Height="32" Margin="139,198,31,0" VerticalAlignment="Top" FontSize="15"/>
-        <DatePicker x:Name="datePickerAffectation"  Width="200" Height="32" Margin="148,146,12,0" VerticalAlignment="Top" FontSize="13"/>
+        <DatePicker x:Name="datePickerAffectation" Width="200" Height="32" Margin="148,146,12,0" VerticalAlignment="Top" FontSize="13"/>
         <ComboBox x:Name="comboBoxDivision" DisplayMemberPath="NumeroDivision" Width="130" Height="32" Margin="189,86,81,0" VerticalAlignment="Top" FontSize="15"/>
         <TextBox x:Name="txtBoxCommentaire" BorderThickness="2" Margin="29,303,35,59" FontSize="20" BorderBrush="Black"/>
         <Button Click="Bouton_Valider_Modification" Content="Valider" Margin="0,0,12,10"  Width="100" FontSize="20" HorizontalAlignment="Right" Height="32" VerticalAlignment="Bottom"/>

@@ -94,21 +94,24 @@ namespace testBddIHM
         public void Read()
         {
         }
-
         public void Update()
         {
-            /*DataAccess access = new DataAccess();
+        }
+
+        public void Update(int numD, int numM, DateTime date, string commentaire)
+        {
+            DataAccess access = new DataAccess();
             try
             {
                 if (access.openConnection())
                 {
-                    access.getData($"UPDATE AFFECTE_A WHERE NUMEROD = {this.NumeroD} AND NUMEROM = {this.NumeroM} AND DATE = '{this.Date.ToShortDateString()}' AND COMMENTAIRE = '{this.Commentaire}')");
+                    access.getData($"UPDATE AFFECTE_A SET NUMEROD = {numD}, NUMEROM = {numM}, DATE = {date.ToShortDateString()}, COMMENTAIRE = '{commentaire}' WHERE NUMEROD = {this.NumeroD} AND NUMEROM = {this.NumeroM} AND DATE = '{this.Date.ToShortDateString()}' AND COMMENTAIRE = '{this.Commentaire}'");
                 }
             }
             catch (Exception ex)
             {
-                System.Windows.MessageBox.Show("NumeroDivision : " + ex.Message, " Important Message");
-            }*/
+                System.Windows.MessageBox.Show("NumeroDivision : " + ex.Message, " Important Message Affectation");
+            }
         }
 
         public void Delete()

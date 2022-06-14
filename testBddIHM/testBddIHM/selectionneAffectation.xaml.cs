@@ -17,11 +17,17 @@ namespace testBddIHM
     /// </summary>
     public partial class selectionneAffectation : Window
     {
+        private MainWindow premiereFenetre;
+
         public selectionneAffectation()
+        { }
+
+        public selectionneAffectation(MainWindow premiereFenetre)
         {
+            this.premiereFenetre = premiereFenetre;
+            ApplicationData.loadApplicationData();
             InitializeComponent();
             listviewAffectationDivision.ItemsSource = ApplicationData.listeAffectation;
-            refresh();
         }
         public void refresh()
         {
@@ -31,8 +37,18 @@ namespace testBddIHM
         }
         private void Bouton_Modifier(object sender, RoutedEventArgs e)
         {
-            Window pageDonneeModifAffectation = new modifierAffectation();
-            pageDonneeModifAffectation.Show();
+            Affectation a = (Affectation)listviewAffectationDivision.SelectedItem;
+            Window pageDonneeModifAffectation = new modifierAffectation(premiereFenetre, this, a.NumeroD, a.NumeroM, a.Date, a.Commentaire);
+            
+            if (listviewAffectationDivision.SelectedItem is null)
+            {
+                MessageBox.Show("Vous n'avez sélectionné aucune ligne", "Modification", MessageBoxButton.OK, MessageBoxImage.Error);
+
+            }
+            else
+            {
+                pageDonneeModifAffectation.Show();
+            }
         }
         private void Bouton_Annuler(object sender, RoutedEventArgs e)
         {

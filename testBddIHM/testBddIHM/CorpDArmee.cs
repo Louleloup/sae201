@@ -61,7 +61,7 @@ namespace testBddIHM
             }
             catch (Exception ex)
             {
-                System.Windows.MessageBox.Show("FindAll Corp d'Armée : " + ex.Message, "Important Message");
+                System.Windows.MessageBox.Show("FindAll Corp d'Armée : " + ex.Message, "Important Message Corp d'armée");
             }
             return listeCorpDArmee;
         }

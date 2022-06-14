@@ -20,9 +20,9 @@
             <ListView.View>
                 <GridView>
                     <GridViewColumn CellTemplate="{StaticResource caseACocher}" Width="30"/>
-                    <GridViewColumn Header="Num Division" Width="80" DisplayMemberBinding="{Binding NumeroD}" />
-                    <GridViewColumn Header="Num Mission" Width="80" DisplayMemberBinding="{Binding NumeroM}" />
-                    <GridViewColumn Header="Date" Width="90" DisplayMemberBinding="{Binding Date, StringFormat='dd MMM yyyy'}" />
+                    <GridViewColumn Header="num Division" Width="80" DisplayMemberBinding="{Binding numeroD}" />
+                    <GridViewColumn Header="num Mission" Width="80" DisplayMemberBinding="{Binding numeroM}" />
+                    <GridViewColumn Header="Date" Width="90" DisplayMemberBinding="{Binding Date, StringFormat=dd/MM/yyyy}" />
                     <GridViewColumn Header="Commentaire" Width="160" DisplayMemberBinding="{Binding Commentaire}" />
                 </GridView>
             </ListView.View>

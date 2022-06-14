@@ -24,7 +24,7 @@ namespace testBddIHM
             }
             catch (Exception ex)
             {
-                System.Windows.MessageBox.Show("NumeroDivision : " + ex.Message, " Important Message");
+                System.Windows.MessageBox.Show("NumeroDivision : " + ex.Message, " Important Message Division");
             }
         }
 

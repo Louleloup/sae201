@@ -6,6 +6,14 @@
         xmlns:local="clr-namespace:testBddIHM"
         mc:Ignorable="d"
         Title="Modification d'une Affectation" Height="450" Width="600">
+    <Window.Resources>
+        <!-- template pour inserer une case a cocher dans un listview : la case est cochee sur la selection d'un item -->
+        <DataTemplate x:Key="caseACocher">
+            <StackPanel Orientation="Horizontal">
+                <CheckBox IsChecked="{Binding Path=IsSelected,RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type ListViewItem}}}"/>
+            </StackPanel>
+        </DataTemplate>
+    </Window.Resources>
     <Grid>
         <Button
             Width="128"
@@ -22,14 +30,15 @@
             SelectionMode="Single">
             <ListView.View>
                 <GridView>
+                    <GridViewColumn CellTemplate="{StaticResource caseACocher}" Width="30"/>
                     <GridViewColumn
-                        Width="100"
-                        DisplayMemberBinding="{Binding NumeroD}"
-                        Header="Num Division" />
+                        Width="120"
+                        DisplayMemberBinding="{Binding NumeroDivision}"
+                        Header="num Division" />
                     <GridViewColumn
-                        Width="100"
-                        DisplayMemberBinding="{Binding NumeroM}"
-                        Header="Num Mission" />
+                        Width="120"
+                        DisplayMemberBinding="{Binding NumeroMission}"
+                        Header="num Mission" />
                     <GridViewColumn
                         Width="100"
                         DisplayMemberBinding="{Binding Date, StringFormat='dd MMM yyyy'}"

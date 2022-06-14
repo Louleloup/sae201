@@ -63,7 +63,7 @@ namespace testBddIHM
 
         private void Bouton_Modifier_Affectation(object sender, RoutedEventArgs e)
         {
-            Window pageSelectionAffectation = new selectionneAffectation();
+            Window pageSelectionAffectation = new selectionneAffectation(this);
             pageSelectionAffectation.Show();
         }
     }
