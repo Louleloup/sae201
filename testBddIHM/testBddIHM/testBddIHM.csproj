@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <ApplicationIcon />
+    <StartupObject />
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="2image.jpg" />
+    <None Remove="4805283-ailes-avec-etoile-embleme-armee-militaire-logo-design-vectoriel-removebg-preview.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="2image.jpg" />
+    <Resource Include="4805283-ailes-avec-etoile-embleme-armee-militaire-logo-design-vectoriel-removebg-preview.png" />
+  </ItemGroup>
+
+</Project>
