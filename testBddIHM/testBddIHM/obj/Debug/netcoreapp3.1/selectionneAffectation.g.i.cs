@@ -61,7 +61,7 @@ namespace testBddIHM {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/testBddIHM;component/selectionneaffectation.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/testBddIHM;V1.0.0.0;component/selectionneaffectation.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\selectionneAffectation.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

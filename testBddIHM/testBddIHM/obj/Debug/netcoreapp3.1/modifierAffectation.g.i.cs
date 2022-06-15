@@ -85,7 +85,7 @@ namespace testBddIHM {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/testBddIHM;component/modifieraffectation.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/testBddIHM;V1.0.0.0;component/modifieraffectation.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\modifierAffectation.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
