@@ -14,7 +14,7 @@
             </StackPanel>
         </DataTemplate>
     </Window.Resources>
-    <Grid>
+    <Grid Background="#FFB9B9B9">
         <Button Content="Supprimer" HorizontalAlignment="Right" Margin="0,0,10,10" VerticalAlignment="Bottom" Height="44" Width="128" FontSize="20" Click="Bouton_Supprimer"/>
         <ListView x:Name="listviewAffectationDivision" Margin="10,10,10,72">
             <ListView.View>

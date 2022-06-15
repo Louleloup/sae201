@@ -14,7 +14,7 @@
             </StackPanel>
         </DataTemplate>
     </Window.Resources>
-    <Grid>
+    <Grid Background="#FFB9B9B9">
         <Button
             Width="128"
             Height="44"

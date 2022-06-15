@@ -48,12 +48,19 @@ namespace testBddIHM
 
         private void Bouton_Valider(object sender, RoutedEventArgs e)
         {
-            Affectation aze = new Affectation(((Mission)comboBoxMission.SelectedItem).NumeroMission, ((Division)comboBoxDivision.SelectedItem).NumeroDivision, ((DateTime)datePickerAffectation.SelectedDate).Date, txtBoxCommentaire.Text.ToString());
-            aze.Create();
-            datePickerAffectation.SelectedDate = null;
-            txtBoxCommentaire.Text = "";
-            reset();
-            refresh();
+            if(comboBoxMission.SelectedItem != null && comboBoxDivision.SelectedItem != null && datePickerAffectation.SelectedDate != null && datePickerAffectation.SelectedDate <= DateTime.Today)
+            {
+                Affectation aze = new Affectation(((Mission)comboBoxMission.SelectedItem).NumeroMission, ((Division)comboBoxDivision.SelectedItem).NumeroDivision, ((DateTime)datePickerAffectation.SelectedDate).Date, txtBoxCommentaire.Text.ToString());
+                aze.Create();
+                datePickerAffectation.SelectedDate = null;
+                txtBoxCommentaire.Text = "";
+                reset();
+                refresh();
+            }
+            else
+                MessageBox.Show("Veuillez remplir correctement le formulaire de modification !", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+
+
         }
 
         private void Bouton_Supprimer_Affectation(object sender, RoutedEventArgs e)
