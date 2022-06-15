@@ -34,14 +34,14 @@
                     <GridViewColumn
                         Width="120"
                         DisplayMemberBinding="{Binding NumeroD}"
-                        Header="num Division" />
+                        Header="Num Division" />
                     <GridViewColumn
                         Width="120"
                         DisplayMemberBinding="{Binding NumeroM}"
-                        Header="num Mission" />
+                        Header="Num Mission" />
                     <GridViewColumn
                         Width="100"
-                        DisplayMemberBinding="{Binding Date, StringFormat='dd MMM yyyy'}"
+                        DisplayMemberBinding="{Binding Date, StringFormat='dd/MM/yyyy'}"
                         Header="Date" />
                     <GridViewColumn
                         Width="160"

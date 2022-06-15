@@ -454,7 +454,8 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Lou\\.nuget\\packages\\": {}
+    "C:\\Users\\rassatl\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
@@ -462,11 +463,15 @@
       "projectUniqueName": "P:\\S2\\SAE_R101\\saeDev\\testBddIHM\\testBddIHM\\testBddIHM.csproj",
       "projectName": "testBddIHM",
       "projectPath": "P:\\S2\\SAE_R101\\saeDev\\testBddIHM\\testBddIHM\\testBddIHM.csproj",
-      "packagesPath": "C:\\Users\\Lou\\.nuget\\packages\\",
+      "packagesPath": "C:\\Users\\rassatl\\.nuget\\packages\\",
       "outputPath": "P:\\S2\\SAE_R101\\saeDev\\testBddIHM\\testBddIHM\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\Lou\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\rassatl\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -515,7 +520,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.300\\RuntimeIdentifierGraph.json"
       }
     }
   }

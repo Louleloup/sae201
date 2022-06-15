@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:testBddIHM"
         mc:Ignorable="d"
-        Title="Gestion d'affectations" Height="800" Width="1050" MinHeight="800" MinWidth="1050">
+        Title="Gestion d'affectations" Height="850" Width="1100" MinHeight="850" MinWidth="1100">
+
     <Grid ShowGridLines="True" Background="#FF9E9C9C">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="400" />
@@ -20,12 +21,12 @@
                 </GridView>
             </ListView.View>
         </ListView>
-        <ListView x:Name="listviewAffectationDivision" Foreground="Black" Grid.Column="1" Margin="29,519,202,15">
+        <ListView x:Name="listviewAffectationDivision" Margin="29,519,184,26" Foreground="Black" Grid.Column="1">
             <ListView.View>
                 <GridView>
                     <GridViewColumn Header="Num Division" Width="80" DisplayMemberBinding="{Binding NumeroD}" />
                     <GridViewColumn Header="Num Mission" Width="80" DisplayMemberBinding="{Binding NumeroM}" />
-                    <GridViewColumn Header="Date" Width="80" DisplayMemberBinding="{Binding Date, StringFormat='dd MMM yyyy'}" />
+                    <GridViewColumn Header="Date" Width="80" DisplayMemberBinding="{Binding Date, StringFormat='dd/MM/yyyy'}" />
                     <GridViewColumn Header="Commentaire" Width="100" DisplayMemberBinding="{Binding Commentaire}" />
 
                 </GridView>
@@ -58,11 +59,12 @@
         <TextBlock Grid.Column="1" HorizontalAlignment="Left" Margin="68,145,0,0" Text="Préciser Date :" VerticalAlignment="Top" Foreground="White" FontSize="25"/>
         <TextBlock Grid.Column="1" HorizontalAlignment="Left" Margin="68,90,0,0" Text="Préciser Division :" VerticalAlignment="Top" Foreground="White" FontSize="25"/>
         <TextBlock Grid.Column="1" HorizontalAlignment="Left" Margin="68,250,0,0" Text="Renseigner Commentaire :" VerticalAlignment="Top" Foreground="White" FontSize="25"/>
-        <ComboBox x:Name="comboBoxMission"  DisplayMemberPath="NumeroMission" Grid.Column="1" Width="130" Height="32" Margin="288,201,212,0" VerticalAlignment="Top" FontSize="20"/>
+        <ComboBox x:Name="comboBoxMission"  DisplayMemberPath="LibelleMission" Grid.Column="1" Width="130" Height="32" Margin="288,201,212,0" VerticalAlignment="Top" FontSize="20"/>
         <DatePicker x:Name="datePickerAffectation" Grid.Column="1" Width="240" Height="32" Margin="298,146,100,0" VerticalAlignment="Top" FontSize="20"/>
-        <ComboBox x:Name="comboBoxDivision" DisplayMemberPath="NumeroDivision" Grid.Column="1" Width="130" Height="32" Margin="288,91,212,0" VerticalAlignment="Top" FontSize="20"/>
+        <ComboBox x:Name="comboBoxDivision" DisplayMemberPath="LibelleDivision" Grid.Column="1" Width="130" Height="32" Margin="288,91,212,0" VerticalAlignment="Top" FontSize="20"/>
         <TextBox x:Name="txtBoxCommentaire" BorderThickness="2" Margin="52,301,46,0" Text="" Grid.Column="1" FontSize="20" BorderBrush="Black" Height="125" VerticalAlignment="Top"/>
         <Button Click="Bouton_Valider" Content="Valider" Grid.Column="1" Margin="0,431,46,0"  Width="100" FontSize="20" HorizontalAlignment="Right" Height="32" VerticalAlignment="Top"/>
+        <Button Click="Bouton_Annuler" Content="Annuler" HorizontalAlignment="Left" Margin="52,431,0,0" VerticalAlignment="Top" Height="32" Width="100" FontSize="20" Grid.Column="1"/>
         <TextBlock HorizontalAlignment="Left" VerticalAlignment="Top" Margin="32,181,0,0" Text="Corp d'Armée" FontSize="20" FontWeight="Bold"/>
         <TextBlock HorizontalAlignment="Left" VerticalAlignment="Top" Margin="216,181,0,0" Text="Division Militaire" FontSize="20" FontWeight="Bold"/>
         <TextBlock Margin="68,486,218,270" Text="Affectation aux Missions Humanitaires" FontSize="20" FontWeight="Bold" Grid.Column="1"/>

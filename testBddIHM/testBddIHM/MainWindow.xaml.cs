@@ -52,6 +52,7 @@ namespace testBddIHM
             aze.Create();
             datePickerAffectation.SelectedDate = null;
             txtBoxCommentaire.Text = "";
+            reset();
             refresh();
         }
 
@@ -65,6 +66,17 @@ namespace testBddIHM
         {
             Window pageSelectionAffectation = new selectionneAffectation(this);
             pageSelectionAffectation.Show();
+        }
+        private void reset()
+        {
+            comboBoxDivision.SelectedItem = null;
+            comboBoxMission.SelectedItem = null;
+            datePickerAffectation.SelectedDate = null;
+            txtBoxCommentaire.Text = "";
+        }
+        private void Bouton_Annuler(object sender, RoutedEventArgs e)
+        {
+            reset();
         }
     }
 }
