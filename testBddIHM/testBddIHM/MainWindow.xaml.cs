@@ -78,5 +78,10 @@ namespace testBddIHM
         {
             reset();
         }
+
+        private void Bouton_Fermer_Application(object sender, RoutedEventArgs e)
+        {
+            System.Windows.Application.Current.Shutdown();
+        }
     }
 }
