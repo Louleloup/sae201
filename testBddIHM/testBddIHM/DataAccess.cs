@@ -1,6 +1,6 @@
 using System;
-using System.Data.SqlClient;
 using System.Windows;
+using System.Data.SqlClient;
 
 namespace testBddIHM
 {
