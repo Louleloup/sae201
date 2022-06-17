@@ -46,11 +46,11 @@ namespace testBddIHM
             this.MainWindow = MainWindow;
         }
 
-
         private void Bouton_Valider_Modification(object sender, RoutedEventArgs e)
         {
-            Affectation aze = new Affectation(numD, numM, date, commentaire);
-            if (comboBoxMission.SelectedItem != null && comboBoxDivision.SelectedItem != null && datePickerAffectation.SelectedDate != null && datePickerAffectation.SelectedDate <= DateTime.Today)
+            Affectation aze = new Affectation(numD, numM, date, commentaire);       
+
+            if (comboBoxMission.SelectedItem != null && comboBoxDivision.SelectedItem != null && datePickerAffectation.SelectedDate != null)
             {
                 aze.Update(((Mission)comboBoxMission.SelectedItem).NumeroMission, ((Division)comboBoxDivision.SelectedItem).NumeroDivision, ((DateTime)datePickerAffectation.SelectedDate).Date, txtBoxCommentaire.Text.ToString());
                 Close();
@@ -59,9 +59,6 @@ namespace testBddIHM
             }
             else
                 MessageBox.Show("Veuillez remplir correctement le formulaire de modification !", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
-
-            
-            
         }
         private void Bouton_Annuler_Modification(object sender, RoutedEventArgs e)
         {

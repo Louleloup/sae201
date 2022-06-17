@@ -4,6 +4,9 @@ using System.Data.SqlClient;
 
 namespace testBddIHM
 {
+    /// <summary>
+    /// Permet d'accéder, de modifier, et de supprimer des affectations présentes dans la base de données.
+    /// </summary>
     public class Affectation : Crud<Affectation>
     {
         private int numeroD;
@@ -75,6 +78,10 @@ namespace testBddIHM
             this.Commentaire = commentaire;
         }
 
+        /// <summary>
+        /// Ajoute les données à la base de donnée
+        /// </summary>
+        /// <exception cref="System.Exception">Déclenchée si la connexion, l'écriture en base ou la déconnexion échouent.</exception> 
         public void Create()
         {
             DataAccess access = new DataAccess();
@@ -87,17 +94,37 @@ namespace testBddIHM
             }
             catch (Exception ex)
             {
-                System.Windows.MessageBox.Show("NumeroAffectation : " + ex.Message, " Important Message");
+                System.Windows.MessageBox.Show(ex.Message, " Important Message");
             }
         }
 
         public void Read()
         {
+            DataAccess access = new DataAccess();
+            try
+            {
+                if (access.openConnection())
+                {
+                    access.getData($"SELECT FROM AFFECTE_A WHERE NUMEROD = {this.NumeroD} AND NUMEROM = {this.NumeroM} AND DATE = '{this.Date.ToShortDateString()}' AND COMMENTAIRE = '{this.Commentaire}'");
+                }
+            }
+            catch (Exception ex)
+            {
+                System.Windows.MessageBox.Show(ex.Message, " Important Message Affectation");
+            }
         }
         public void Update()
         {
         }
 
+        /// <summary>
+        /// Modifie des données par d'autres
+        /// </summary>
+        /// <param name="numD">Paramètre permettant de récupérer le numéro de Division concernant une affectation et de modifier des données dans la base de donnée.</param>
+        /// <param name="numM">Paramètre permettant de récupérer le numéro de Mission concernant une affectation et de modifier des données dans la base de donnée.</param>
+        /// <param name="date">Paramètre permettant de récupérer la date concernant une affectation et de modifier des données dans la base de donnée.</param>
+        /// <param name="commentaire">Paramètre permettant de récupérer le commentaire concernant une affectation et de modifier des données dans la base de donnée.</param>
+        /// <exception cref="System.Exception">Déclenchée si la connexion, la modification en base ou la déconnexion échouent.</exception> 
         public void Update(int numD, int numM, DateTime date, string commentaire)
         {
             DataAccess access = new DataAccess();
@@ -105,15 +132,19 @@ namespace testBddIHM
             {
                 if (access.openConnection())
                 {
-                    access.getData($"UPDATE AFFECTE_A SET NUMEROD = {numD}, NUMEROM = {numM}, DATE = {date.ToShortDateString()}, COMMENTAIRE = '{commentaire}' WHERE NUMEROD = {this.NumeroD} AND NUMEROM = {this.NumeroM} AND DATE = '{this.Date.ToShortDateString()}' AND COMMENTAIRE = '{this.Commentaire}'");
+                    access.getData($"UPDATE AFFECTE_A SET NUMEROD = '{numD}', NUMEROM = '{numM}', DATE = '{date.ToShortDateString()}', COMMENTAIRE = '{commentaire}' WHERE NUMEROD = {this.NumeroD} AND NUMEROM = {this.NumeroM} AND DATE = '{this.Date.ToShortDateString()}' AND COMMENTAIRE = '{this.Commentaire}'");
                 }
             }
             catch (Exception ex)
             {
-                System.Windows.MessageBox.Show("NumeroDivision : " + ex.Message, " Important Message Affectation");
+                System.Windows.MessageBox.Show(ex.Message, " Important Message Affectation");
             }
         }
 
+        /// <summary>
+        /// Supprime une affectation
+        /// </summary>
+        /// <exception cref="System.Exception">Déclenchée si la connexion, la suppression en base ou la déconnexion échouent.</exception> 
         public void Delete()
         {
             DataAccess access = new DataAccess();
@@ -126,7 +157,7 @@ namespace testBddIHM
             }
             catch (Exception ex)
             {
-                System.Windows.MessageBox.Show("NumeroAffectation : " + ex.Message, " Important Message");
+                System.Windows.MessageBox.Show(ex.Message, " Important Message");
             }
         }
 

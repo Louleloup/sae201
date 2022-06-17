@@ -48,7 +48,7 @@ namespace testBddIHM
 
         private void Bouton_Valider(object sender, RoutedEventArgs e)
         {
-            if(comboBoxMission.SelectedItem != null && comboBoxDivision.SelectedItem != null && datePickerAffectation.SelectedDate != null && datePickerAffectation.SelectedDate <= DateTime.Today)
+            if(comboBoxMission.SelectedItem != null && comboBoxDivision.SelectedItem != null && datePickerAffectation.SelectedDate != null)
             {
                 Affectation aze = new Affectation(((Mission)comboBoxMission.SelectedItem).NumeroMission, ((Division)comboBoxDivision.SelectedItem).NumeroDivision, ((DateTime)datePickerAffectation.SelectedDate).Date, txtBoxCommentaire.Text.ToString());
                 aze.Create();

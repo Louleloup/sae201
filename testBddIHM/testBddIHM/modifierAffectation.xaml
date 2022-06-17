@@ -5,10 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:testBddIHM"
         mc:Ignorable="d"
-        Title="Modification d'une Affectation" Height="550" Width="420" MinHeight="550" MinWidth="420">
+        Title="Modification d'une Affectation" Height="550" Width="420" MinHeight="550" MinWidth="420" Icon="/logoMilitaire.png">
     <Grid >
         <Grid.Background>
-            <ImageBrush ImageSource="/2image.jpg"/>
+            <ImageBrush ImageSource="fondMilitaire.jpg"/>
         </Grid.Background>
         <TextBlock HorizontalAlignment="Center" Margin="0,26,0,0" Text="Modification d'Affectation :"  VerticalAlignment="Top" FontSize="20" TextDecorations="{x:Null}" FontWeight="Bold" Foreground="White"/>
         <TextBlock Margin="23,204,0,0" Text="Préciser Mission :" VerticalAlignment="Top" FontSize="15" HorizontalAlignment="Left" Width="114" Foreground="White"/>
