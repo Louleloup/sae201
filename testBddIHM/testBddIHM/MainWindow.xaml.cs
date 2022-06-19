@@ -31,6 +31,8 @@ namespace testBddIHM
             comboBoxDivision.ItemsSource = ApplicationData.listeDivision;
             comboBoxMission.ItemsSource = ApplicationData.listeMission;
             listviewAffectationDivision.ItemsSource = ApplicationData.listeAffectation;
+            comboBoxTrie.ItemsSource = ApplicationData.listeDivision;
+            listviewAffectationDivision2.ItemsSource = ApplicationData.listviewAffectationDivision2;
         }
 
         public void refresh()
@@ -44,6 +46,8 @@ namespace testBddIHM
             comboBoxDivision.ItemsSource = ApplicationData.listeDivision;
             comboBoxMission.ItemsSource = ApplicationData.listeMission;
             listviewAffectationDivision.ItemsSource = ApplicationData.listeAffectation;
+            comboBoxTrie.ItemsSource = ApplicationData.listeDivision;
+            listviewAffectationDivision2.ItemsSource = ApplicationData.listviewAffectationDivision2;
         }
 
         private void Bouton_Valider(object sender, RoutedEventArgs e)
@@ -89,6 +93,26 @@ namespace testBddIHM
         private void Bouton_Fermer_Application(object sender, RoutedEventArgs e)
         {
             System.Windows.Application.Current.Shutdown();
+        }
+        private void updateliste()
+        {
+            if (!(comboBoxTrie.SelectedItem is null))
+            {
+                ApplicationData.listviewAffectationDivision2.Clear();
+                
+                foreach (Affectation uneAffectation in ApplicationData.listeAffectation)
+                {
+                    if (uneAffectation.NumeroD == ((Division)(comboBoxTrie.SelectedItem)).NumeroDivision)
+                    {
+                        ApplicationData.listviewAffectationDivision2.Add(uneAffectation);
+                    }
+                }
+                listviewAffectationDivision2.Items.Refresh();
+            }
+        }
+        private void comboBoxTrie_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            updateliste();
         }
     }
 }

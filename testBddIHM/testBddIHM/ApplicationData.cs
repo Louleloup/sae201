@@ -26,17 +26,25 @@ namespace testBddIHM
             get;
             set;
         }
+        public static List<Affectation> listviewAffectationDivision2
+        {
+            get;
+            set;
+        }
+        
         public static void loadApplicationData()
         {
             CorpDArmee unCorpDArmee = new CorpDArmee();
             Division unDivision = new Division();
             Mission uneMission = new Mission();
             Affectation uneAffectation = new Affectation();
+            Affectation uneUpdate = new Affectation();
 
             listeCorpDArmee = unCorpDArmee.FindAll();
             listeDivision = unDivision.FindAll();
             listeMission = uneMission.FindAll();
             listeAffectation = uneAffectation.FindAll();
+            listviewAffectationDivision2 = uneUpdate.FindAll();
 
         }
     }
