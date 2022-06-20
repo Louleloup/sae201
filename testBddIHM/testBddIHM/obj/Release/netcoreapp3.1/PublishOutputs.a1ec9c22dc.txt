@@ -1,0 +1,11 @@
+C:\Users\rassatl\Desktop\testBddIHM.exe
+C:\Users\rassatl\Desktop\testBddIHM.dll
+C:\Users\rassatl\Desktop\testBddIHM.deps.json
+C:\Users\rassatl\Desktop\testBddIHM.runtimeconfig.json
+C:\Users\rassatl\Desktop\testBddIHM.pdb
+C:\Users\rassatl\Desktop\System.Data.SqlClient.dll
+C:\Users\rassatl\Desktop\runtimes\win-arm64\native\sni.dll
+C:\Users\rassatl\Desktop\runtimes\win-x64\native\sni.dll
+C:\Users\rassatl\Desktop\runtimes\win-x86\native\sni.dll
+C:\Users\rassatl\Desktop\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\rassatl\Desktop\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll

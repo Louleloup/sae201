@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
   <Class Name="testBddIHM.Affectation">
-    <Position X="2" Y="0.5" Width="5" />
+    <Position X="1.75" Y="0.5" Width="5" />
     <TypeIdentifier>
       <HashCode>AAQAABAAAAAQAAAAABAYCAAgAAEAAEABABAIAQAAAAA=</HashCode>
       <FileName>Affectation.cs</FileName>
@@ -33,14 +33,14 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="testBddIHM.DataAccess">
-    <Position X="7.75" Y="5.5" Width="3" />
+    <Position X="8.75" Y="9" Width="3" />
     <TypeIdentifier>
       <HashCode>AAEQAAAAAAAAAAAAAAABAAAAAAAQAAAAAAAAAAAAAAA=</HashCode>
       <FileName>DataAccess.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="testBddIHM.modifierAffectation">
-    <Position X="16.25" Y="4.25" Width="1.5" />
+    <Position X="18.5" Y="8" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAgAQAAQAAAAAAAEAAIEAAAAAAAAAAAACQAAAAA=</HashCode>
       <FileName>modifierAffectation.xaml.cs</FileName>
@@ -48,7 +48,7 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="testBddIHM.selectionneAffectation">
-    <Position X="12.75" Y="5.25" Width="1.5" />
+    <Position X="14.5" Y="8.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAEAAAAAEAAAAAAAAAAAAAAAAAAAAAABAAAAAIAA=</HashCode>
       <FileName>selectionneAffectation.xaml.cs</FileName>
@@ -56,7 +56,7 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="testBddIHM.supprimerAffectation">
-    <Position X="11" Y="5.25" Width="1.5" />
+    <Position X="12.5" Y="8.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAEAAAAAEAAAAAAAAAAAAAAAAAAAAAABAAAQAAAA=</HashCode>
       <FileName>supprimerAffectation.xaml.cs</FileName>
@@ -64,15 +64,75 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="testBddIHM.MainWindow">
-    <Position X="14.5" Y="4.5" Width="1.5" />
+    <Position X="16.5" Y="8" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAIAAEAEKAQIAAAAAAAAAAAAAAAAAAAAAAFAAAAEAAA=</HashCode>
       <FileName>MainWindow.xaml.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
+  <Class Name="testBddIHM.ApplicationData">
+    <Position X="7" Y="7.5" Width="2" />
+    <AssociationLine Name="listeAffectation" Type="testBddIHM.Affectation">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-1.735" Y="-1.566" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="listeDivision" Type="testBddIHM.Division">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-1.732" Y="1.138" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="listeCorpDArmee" Type="testBddIHM.CorpDArmee" ManuallyRouted="true">
+      <Path>
+        <Point X="9" Y="8.314" />
+        <Point X="10.32" Y="8.314" />
+        <Point X="10.32" Y="7.702" />
+        <Point X="12.379" Y="7.702" />
+        <Point X="12.379" Y="5.466" />
+        <Point X="15.5" Y="5.466" />
+        <Point X="15.5" Y="4.045" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-0.015" Y="0.499" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="listeMission" Type="testBddIHM.Mission" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="8.812" Y="7.5" />
+        <Point X="8.812" Y="7.125" />
+        <Point X="11.875" Y="7.125" />
+        <Point X="11.875" Y="4.238" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.085" Y="0.637" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="listviewTri" Type="testBddIHM.Affectation" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="7" Y="7.812" />
+        <Point X="7" Y="7.742" />
+        <Point X="4.625" Y="7.742" />
+        <Point X="4.625" Y="5.199" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.11" Y="0.422" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>QAAAAEAAAAAAAAAAAAAAABQCAAAAAAAAAAAAAAAEAAA=</HashCode>
+      <FileName>ApplicationData.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="listeAffectation" />
+      <Property Name="listeDivision" />
+      <Property Name="listeCorpDArmee" />
+      <Property Name="listeMission" />
+      <Property Name="listviewTri" />
+    </ShowAsCollectionAssociation>
+  </Class>
   <Interface Name="testBddIHM.Crud&lt;T&gt;">
-    <Position X="5" Y="5.5" Width="2.5" />
+    <Position X="5.75" Y="9" Width="2.5" />
     <TypeIdentifier>
       <HashCode>AAQAAAAAAAAAAAAAAAAQCAAgAAEAAEAAAAAAAAAAAAA=</HashCode>
       <FileName>Crud.cs</FileName>
