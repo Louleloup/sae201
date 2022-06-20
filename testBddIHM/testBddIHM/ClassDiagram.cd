@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="testBddIHM.Affectation">
+    <Position X="2" Y="0.5" Width="5" />
+    <TypeIdentifier>
+      <HashCode>AAQAABAAAAAQAAAAABAYCAAgAAEAAEABABAIAQAAAAA=</HashCode>
+      <FileName>Affectation.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="testBddIHM.CorpDArmee">
+    <Position X="14.25" Y="0.5" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAEAAQCAAhAAkAAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>CorpDArmee.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="testBddIHM.Division">
+    <Position X="7.25" Y="0.5" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAARAAQDAAgAAEAAEAAAAAAAAEAAAA=</HashCode>
+      <FileName>Division.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="testBddIHM.Mission">
+    <Position X="10.75" Y="0.5" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAQAABAAAAAAABAAAAEQCAAgAAEAAEAAAAAAAAAAAAg=</HashCode>
+      <FileName>Mission.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="testBddIHM.DataAccess">
+    <Position X="7.75" Y="5.5" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAEQAAAAAAAAAAAAAAABAAAAAAAQAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DataAccess.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="testBddIHM.modifierAffectation">
+    <Position X="16.25" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAQAAQAAAAAAAEAAIEAAAAAAAAAAAACQAAAAA=</HashCode>
+      <FileName>modifierAffectation.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="testBddIHM.selectionneAffectation">
+    <Position X="12.75" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAAEAAAAAAAAAAAAAAAAAAAAAABAAAAAIAA=</HashCode>
+      <FileName>selectionneAffectation.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="testBddIHM.supprimerAffectation">
+    <Position X="11" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAAEAAAAAAAAAAAAAAAAAAAAAABAAAQAAAA=</HashCode>
+      <FileName>supprimerAffectation.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="testBddIHM.MainWindow">
+    <Position X="14.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAEAEKAQIAAAAAAAAAAAAAAAAAAAAAAFAAAAEAAA=</HashCode>
+      <FileName>MainWindow.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Interface Name="testBddIHM.Crud&lt;T&gt;">
+    <Position X="5" Y="5.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAQCAAgAAEAAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>Crud.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

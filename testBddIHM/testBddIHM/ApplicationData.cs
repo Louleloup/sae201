@@ -26,7 +26,7 @@ namespace testBddIHM
             get;
             set;
         }
-        public static List<Affectation> listviewAffectationDivision2
+        public static List<Affectation> listviewTri
         {
             get;
             set;
@@ -44,7 +44,7 @@ namespace testBddIHM
             listeDivision = unDivision.FindAll();
             listeMission = uneMission.FindAll();
             listeAffectation = uneAffectation.FindAll();
-            listviewAffectationDivision2 = uneUpdate.FindAll();
+            listviewTri = uneUpdate.FindAll();
 
         }
     }

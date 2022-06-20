@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:testBddIHM"
         mc:Ignorable="d"
-        Title="Gestion d'affectations" Height="850" Width="1100" MinHeight="850" MinWidth="1100" Icon="/logoMilitaire.png">
+        Title="Gestion d'affectations" Height="950" Width="1200" MinHeight="950" MinWidth="1200" Icon="/logoMilitaire.png">
 
     <Grid ShowGridLines="True" Background="#FFB9B9B9">
         <Grid.ColumnDefinitions>
@@ -33,7 +33,7 @@
             </ListView.View>
         </ListView>
 
-        <ListView x:Name="listviewAffectationDivision2" Margin="129,615,233,56" Foreground="Black" Grid.Column="1">
+        <ListView x:Name="listviewTri" Margin="29,519,218,26" Foreground="Black" Grid.Column="1">
             <ListView.View>
                 <GridView>
                     <GridViewColumn Header="Num Division" Width="80" DisplayMemberBinding="{Binding NumeroD}" />
@@ -85,9 +85,11 @@
 
         <Border CornerRadius="5" BorderThickness="3"  BorderBrush="Black" Grid.Column="1" Margin="0,519,10,90" Background="#FFB4B09E" HorizontalAlignment="Right" Width="200"/>
         <TextBlock Grid.Column="1" Margin="0,519,58,0" Text="Options" FontWeight="Bold" FontSize="28" HorizontalAlignment="Right" Width="106" Height="40" VerticalAlignment="Top"/>
-        <Button Click="Bouton_Modifier_Affectation" Content="Modifier Affectation" BorderThickness="2" Margin="0,564,27,0" FontSize="16" Grid.Column="1" Height="40" VerticalAlignment="Top" HorizontalAlignment="Right" Width="164"/>
-        <Button Click="Bouton_Supprimer_Affectation" Content="Supprimer Affectation" BorderThickness="2" Margin="0,669,27,0"  FontSize="16" Grid.Column="1" Height="40" VerticalAlignment="Top" HorizontalAlignment="Right" Width="164"/>
-        <ComboBox x:Name="comboBoxTrie" DisplayMemberPath="NumeroDivision" BorderThickness="2" Margin="0,611,28,0" FontSize="16" Grid.Column="1" Height="40" VerticalAlignment="Top" HorizontalAlignment="Right" Width="164" SelectionChanged="comboBoxTrie_SelectionChanged"/>
+        <Button Click="Bouton_Modifier_Affectation" Content="Modifier Affectation" BorderThickness="2" Margin="0,0,27,309" FontSize="16" Grid.Column="1" HorizontalAlignment="Right" Width="164" Height="50" VerticalAlignment="Bottom"/>
+        <Button Click="Bouton_Supprimer_Affectation" Content="Supprimer Affectation" BorderThickness="2" Margin="0,0,27,234"  FontSize="16" Grid.Column="1" HorizontalAlignment="Right" Width="164" Height="50" VerticalAlignment="Bottom"/>
+        <TextBlock Grid.Column="1" HorizontalAlignment="Right" Margin="0,0,29,189" Text="Tri par Division :" TextWrapping="Wrap" VerticalAlignment="Bottom" FontWeight="Bold" FontSize="20"/>
+        <ComboBox x:Name="comboBoxTri" DisplayMemberPath="NumeroDivision" BorderThickness="2" Margin="0,0,27,159" FontSize="20" Grid.Column="1" HorizontalAlignment="Right" Width="164" SelectionChanged="comboBoxTri_SelectionChanged" Height="30" VerticalAlignment="Bottom"/>
+        <Button Click="Bouton_Annuler_Tri" Content="Annuler Tri" BorderThickness="2" Margin="0,0,58,124"  FontSize="16" Grid.Column="1" HorizontalAlignment="Right" Width="94" Height="30" VerticalAlignment="Bottom"/>
 
 
         <Button Click="Bouton_Fermer_Application" Margin="0,0,58,26" FontSize="30" Grid.Column="1" Height="50" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="102" Foreground="White">
@@ -99,6 +101,5 @@
                 </ControlTemplate>
             </Button.Template>
         </Button>
-
     </Grid>
 </Window>

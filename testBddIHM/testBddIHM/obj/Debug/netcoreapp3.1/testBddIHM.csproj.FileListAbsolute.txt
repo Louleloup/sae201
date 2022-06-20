@@ -58,4 +58,3 @@ P:\S2\SAE_R101\saeDev\testBddIHM\testBddIHM\obj\Debug\netcoreapp3.1\selectionneA
 P:\S2\SAE_R101\saeDev\testBddIHM\testBddIHM\obj\Debug\netcoreapp3.1\selectionneAffectation.baml
 P:\S2\SAE_R101\saeDev\testBddIHM\testBddIHM\obj\Debug\netcoreapp3.1\modifierAffectation.g.cs
 P:\S2\SAE_R101\saeDev\testBddIHM\testBddIHM\obj\Debug\netcoreapp3.1\modifierAffectation.baml
-P:\S2\SAE_R101\saeDev\testBddIHM\testBddIHM\obj\Debug\netcoreapp3.1\testBddIHM.GeneratedMSBuildEditorConfig.editorconfig

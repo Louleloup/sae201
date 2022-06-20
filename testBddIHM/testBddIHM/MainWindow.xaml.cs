@@ -31,8 +31,9 @@ namespace testBddIHM
             comboBoxDivision.ItemsSource = ApplicationData.listeDivision;
             comboBoxMission.ItemsSource = ApplicationData.listeMission;
             listviewAffectationDivision.ItemsSource = ApplicationData.listeAffectation;
-            comboBoxTrie.ItemsSource = ApplicationData.listeDivision;
-            listviewAffectationDivision2.ItemsSource = ApplicationData.listviewAffectationDivision2;
+            comboBoxTri.ItemsSource = ApplicationData.listeDivision;
+            listviewTri.ItemsSource = ApplicationData.listviewTri;
+            listviewTri.Visibility = Visibility.Hidden;
         }
 
         public void refresh()
@@ -46,8 +47,8 @@ namespace testBddIHM
             comboBoxDivision.ItemsSource = ApplicationData.listeDivision;
             comboBoxMission.ItemsSource = ApplicationData.listeMission;
             listviewAffectationDivision.ItemsSource = ApplicationData.listeAffectation;
-            comboBoxTrie.ItemsSource = ApplicationData.listeDivision;
-            listviewAffectationDivision2.ItemsSource = ApplicationData.listviewAffectationDivision2;
+            comboBoxTri.ItemsSource = ApplicationData.listeDivision;
+            listviewTri.ItemsSource = ApplicationData.listviewTri;
         }
 
         private void Bouton_Valider(object sender, RoutedEventArgs e)
@@ -96,23 +97,33 @@ namespace testBddIHM
         }
         private void updateliste()
         {
-            if (!(comboBoxTrie.SelectedItem is null))
+            if (!(comboBoxTri.SelectedItem is null))
             {
-                ApplicationData.listviewAffectationDivision2.Clear();
+                ApplicationData.listviewTri.Clear();
                 
                 foreach (Affectation uneAffectation in ApplicationData.listeAffectation)
                 {
-                    if (uneAffectation.NumeroD == ((Division)(comboBoxTrie.SelectedItem)).NumeroDivision)
+                    if (uneAffectation.NumeroD == ((Division)(comboBoxTri.SelectedItem)).NumeroDivision)
                     {
-                        ApplicationData.listviewAffectationDivision2.Add(uneAffectation);
+                        ApplicationData.listviewTri.Add(uneAffectation);
                     }
                 }
-                listviewAffectationDivision2.Items.Refresh();
+                if (ApplicationData.listviewTri.Count <= 0)
+                    MessageBox.Show("Il n'y à pas d'affectation contenant ce numéro de division !", "Warning", MessageBoxButton.OK, MessageBoxImage.Warning);
+                listviewTri.Items.Refresh();
             }
         }
-        private void comboBoxTrie_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void comboBoxTri_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             updateliste();
+            listviewAffectationDivision.Visibility = Visibility.Hidden;
+            listviewTri.Visibility = Visibility.Visible;
+        }
+
+        private void Bouton_Annuler_Tri(object sender, RoutedEventArgs e)
+        {
+            listviewTri.Visibility = Visibility.Hidden;
+            listviewAffectationDivision.Visibility = Visibility.Visible;
         }
     }
 }

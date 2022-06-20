@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:testBddIHM"
         mc:Ignorable="d"
-        Title="Modification d'une Affectation" Height="450" Width="600" Icon="/logoMilitaire.png">
+        Title="Modification d'une Affectation" Height="450" Width="600" MinHeight="450" MinWidth="600" Icon="/logoMilitaire.png">
     <Window.Resources>
         <!-- template pour inserer une case a cocher dans un listview : la case est cochee sur la selection d'un item -->
         <DataTemplate x:Key="caseACocher">
